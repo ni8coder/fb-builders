@@ -1,0 +1,242 @@
+/*
+  * Copyright 2015 Kopasoft http://kopatheme.com/.
+  * MIT License.
+*/
+.epl-archive-default{
+	position: relative;
+	z-index: 9;
+	.epl-archive-utility-wrapper{
+		position: absolute;
+		top:-57px;
+		right: 15px;
+	}
+	.entry-content{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.epl-listing-post{
+		border-radius: 2px;
+		overflow: hidden;
+		margin-top: 30px;
+		margin-bottom: 0px;
+		width: 100%;
+		display: block;
+		padding-left: 15px;
+		padding-right: 15px;
+		position: relative;		
+		&:before{
+			content: "";
+			border-radius: 2px;
+			position: absolute;
+			height: 100%;
+			width: 90%;
+			right: 15px;
+			z-index: -1;
+			top:0px;
+			background-color: $cl-001;
+			border:1px solid $cl-003;
+		}
+		.property-featured-image-wrapper{
+		width: auto;
+		float: none;
+		}
+		.epl-archive-entry-image{
+			float: left;
+			overflow: hidden;
+		}
+		.epl-inspection-times{
+			overflow: hidden;
+			@extend %list_reset;
+			margin: 0px;
+			a{
+				padding: 25px 30px 5px 30px;
+				font-weight: 300;
+				display: inline-block;
+				color:$color-hover;
+				text-transform: capitalize;
+			}
+		}
+		.property-content{
+			width: auto;
+			float: none;
+			overflow: hidden;
+			padding: 0px 30px 15px 30px;
+			.entry-title{
+				font-size: 20px;
+				line-height: 28px;
+				margin-bottom: 10px;
+			}
+			.entry-content{
+				font-size: 16px;
+				line-height: 24px;
+				color: $cl-009;
+				font-family: $font-secondary;
+				font-weight: 300;
+				margin-bottom: 10px;
+			}
+			.property-feature-icons{
+				margin-bottom: 23px;
+				.icon-value{
+					font-weight: 300;
+					color:$color-primary;
+					font-family: $font-secondary;
+				}
+			}
+			.page-price{
+				font-size: 19px;
+				font-weight: 500;
+				color: $color-hover;
+				.page-price-prefix{
+					color:$color-hover;
+					font-size: 15px;
+					font-weight: 400;
+					margin-right: 20px;
+					position: relative;
+					&:after{
+						position: absolute;
+						content: "";
+						height: 13px;
+						width: 1px;
+						background-color: $color-hover;
+						right: -14px;
+						top:5px;
+					}
+				}
+			}
+		}
+		img{
+			border-top-left-radius: 2px;
+			border-bottom-left-radius: 2px;
+		}
+	}	
+	.epl-listing-post.epl_listing_grid_view{
+		width: 49.99999%;
+		float: left;
+		clear: none !important;		
+		background-color: inherit;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-left: -0.5px;
+		margin-right: -0.5px;
+		&:before{
+			background-color: inherit;
+			border:0px;
+		}
+		.property-featured-image-wrapper{
+			padding: 0px;
+			overflow: hidden;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.epl-archive-entry-image{
+			float: none;
+			border-bottom-left-radius: 0px;			
+			img{
+				width: 100%;
+			}
+		}
+		.epl-inspection-times{
+			border-left: 1px solid $cl-003;
+			border-right: 1px solid $cl-003;
+			background-color: $cl-001;
+		}
+		.property-content{
+			background-color: $cl-001;
+			padding-bottom: 30px;
+			border: 1px solid $cl-003;
+			border-top: 0px; 
+			overflow: hidden;
+			border-bottom-right-radius: 2px;
+			border-bottom-left-radius: 2px;
+		}
+		.epl-blog-image{
+			width: 100%;
+		}
+		.property-content .page-price .page-price-prefix{
+			font-size: 14px;
+		}
+		img{
+			border-top-left-radius: 2px;
+			border-bottom-left-radius: 2px;
+		}
+	}
+	.archive-title{
+		font-size: 34px;
+		padding-left: 25px;
+		position: relative;
+		line-height: 34px;
+		&:before{
+			content: "";
+			position: absolute;
+			height: 26px;
+			width: 4px;
+			background-color: $color-hover;
+			left: 0px;
+			top:3px;
+		}
+	}
+	.epl-pagination{
+		padding-top: 50px;
+	}
+	.epl-blog-image{
+	    position: relative;
+	    overflow: hidden;
+	    float: left;
+	    .epl-stickers-wrapper{
+	        position: absolute;
+	        height: 100%;
+	        width: 100%;
+	        top:0px;
+	        text-align: center;
+	        @extend %transition;
+	    }
+	    .status-sticker{
+	        display: inline-block;
+	        margin: 0px;
+	        padding: 0px;
+	        height: 45px;
+	        width: 45px;
+	        background: $cl-001 !important;
+	        border-radius: 50%;
+	        position: absolute;
+	        top: 45% !important;
+	        right:-50px;
+	        transform: rotate(0deg);
+	        -moz-transform: rotate(0deg);
+	        -webkit-transform: rotate(0deg);
+	        -o-transform: rotate(0deg);
+	        -ms-transform: rotate(0deg);
+	        @include transition(.6s);
+	        i{
+	            color:$color-hover;
+	            font-size: 14px;
+	            line-height: 45px;
+	        }
+	    }
+	    &:hover{
+	        .epl-stickers-wrapper{
+	            background-color: rgba(192,150,45,.7);
+	        }
+	        .status-sticker{
+	            right: 46%;
+	            transform: rotate(-720deg);
+	            -moz-transform: rotate(-720deg);
+	            -webkit-transform: rotate(-720deg);
+	            -o-transform: rotate(-720deg);
+	            -ms-transform: rotate(-720deg);
+	        }
+	        img{
+	        	left: 0px;
+	        }
+	    }
+	    img{
+	    	width: 100%;
+	    }
+	}
+}
+.real_custom_for_epl_3_col .epl-listing-post.epl_listing_grid_view{
+	width: 33.33333%;
+	.property-content .page-price{
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,57 @@
+/*
+  * Copyright 2015 Kopasoft http://kopatheme.com/.
+  * MIT License.
+*/
+.real_widget_contactus_info{
+	.widget-content{
+		ul{
+			padding: 0px;
+			margin: 0px;			
+		}
+		li{
+			list-style-type: none;
+			margin-bottom: 0px;
+			margin-top: 35px;
+		}
+		.real_title_small{
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+		p{
+			line-height: 30px;
+			color:$cl-009;
+			font-size: 16px;
+			margin-bottom: 0px;
+		}
+		a.real_phone_tel,a.real_phone_fax{
+			color: $cl-009;
+			font-size: 16px;
+			line-height: 30px;
+		}
+		a{
+			font-size: 15px;
+			font-family: $font-secondary;
+			line-height: 16px;
+			color:$color-hover;
+			font-weight: 300;
+			display: block;
+			font-size: 16px;
+			line-height: 30px;
+			margin-top: 0px;
+			&:first-of-type{
+				margin-top: 0px;
+			}
+			&:hover{
+				letter-spacing: .7px;
+			}
+		}
+	}
+}
+.real_widget_contactus_form{
+	.widget-content{
+		padding-top: 23px;
+	}
+}

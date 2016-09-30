@@ -1,0 +1,619 @@
+/*
+  * Copyright 2015 Kopasoft http://kopatheme.com/.
+  * MIT License.
+*/
+.real_widget_has_pagi_many_pro{
+	.widget-content{
+		@extend %clearfix;
+		.epl-listing-post{
+			border: 1px solid $cl-003;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+			overflow: hidden;
+			margin-top: 30px;
+		}
+		.epl-inspection-times{
+			@extend %list_reset;
+			a{
+				padding: 25px 30px 15px 30px;
+				font-weight: 300;
+				display: inline-block;
+				color:$color-hover;
+				text-transform: capitalize;
+			}
+		}
+		.property-content{
+			padding: 0px 30px 65px 30px;
+			.entry-title{
+				font-size: 22px;
+				line-height: 28px;
+
+			}
+			.entry-content{
+				font-size: 15px;
+				line-height: 24px;
+				color: $cl-006;
+				font-family: $font-secondary;
+				font-weight: 300;
+				margin-bottom: 10px;
+			}
+			.property-feature-icons{
+				margin-bottom: 23px;
+				.icon-value{
+					font-weight: 300;
+					color:$color-primary;
+					font-family: $font-secondary;
+				}
+			}
+			.page-price{
+				font-size: 19px;
+				font-weight: 500;
+				color: $color-hover;
+				.page-price-prefix{
+					color:$color-hover;
+					font-size: 15px;
+					font-weight: 400;
+					margin-right: 20px;
+					position: relative;
+					&:after{
+						position: absolute;
+						content: "";
+						height: 13px;
+						width: 1px;
+						background-color: $color-hover;
+						right: -14px;
+						top:5px;
+					}
+				}
+			}
+		}
+		.entry-item{
+			margin-bottom: 50px;
+			&:last-of-type{
+				margin-bottom: 30px;
+			}
+			.entry-thumb{
+				border-top-left-radius:2px; 
+				border-top-right-radius:2px;
+				overflow: hidden;
+			}
+			.entry-content{
+				padding: 30px 30px 46px 30px;
+				border: 1px solid $cl-003;
+				border-top: 0px;
+				border-bottom-left-radius:2px; 
+				border-bottom-right-radius:2px; 
+				.entry-title{
+					margin-bottom: 20px;
+					color:$color-secondary;
+				}
+				.real_button{
+					margin-bottom: 25px;
+				}
+				.entry-detail{
+					line-height: 24px;
+					color:$cl-009;
+					margin-bottom: 25px;
+					font-size: 16px;
+				}
+				.meta_data{
+					span{
+						font-size: 14px;
+						color: $color-secondary;
+						font-weight: 500;
+						a{
+							color:$color-hover;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+		.entry-item.real_style_01{
+			.entry-thumb{
+				float: left;
+				border-radius: 2px;
+				overflow: hidden;
+				margin-right: 30px;
+				margin-bottom: 10px;
+				img{
+
+				}
+				&:hover{
+					img{
+						left: 0px;
+					}
+				}
+			}
+			.entry-content{
+				border: 0px;
+				padding: 0px;
+				.entry-title{
+					font-size: 30px;
+					line-height: 30px;
+					text-transform: uppercase;
+				}
+				p{
+					font-size: 16px;
+					line-height: 25px;
+				}
+			}
+		}
+	}
+	.paginator{
+		margin-top: 50px;
+	}
+}
+.widget_epl_property_gallery{
+	margin-top: 50px;
+	img{
+		border-radius: 2px;
+	}
+	.gallery-item{
+		margin-bottom: 0px;
+	}
+	.gallery-columns-3{
+		margin-left: -5px;
+		margin-right: -5px;
+		margin-top: -10px;
+		@extend %clearfix;
+		.gallery-item{
+			width: 33.333%;
+			margin-top: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+			float: left;
+		}
+	}
+}
+.widget_epl_property_search.real_style_03{
+	margin-top: 50px;
+	.epl-search-tabs{
+		border-bottom: 3px solid $color-primary;
+		@extend %clearfix;
+		.tab-link{
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+			color:$color-secondary;
+			padding: 15px 30px;
+			margin-right: 0px;
+			background-color: $cl-003;
+			float: left;
+			margin-right: 3px;
+		}
+		.tab-link.epl-sb-current{
+			background-color: $color-primary;
+			color:$cl-001;
+			border-bottom: 0px;
+		}
+	}
+	.epl-search-forms-wrapper{
+		width: 100%;
+		max-width: 100%;
+		padding: 50px 25px;
+		background-color: $cl-001;
+		border: 1px solid $cl-003;
+		border-top: 0px;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		overflow: hidden;
+		form{
+			@extend %clearfix;
+		}
+		.real_elp_tab_title{
+			font-size: 18px;
+			line-height: 18px;
+			text-transform: uppercase;
+			font-weight: 600;
+			color:$color-secondary;
+			margin-bottom: 13px;
+		}
+		.epl-search-label{
+			font-family: $font-secondary;
+			font-size: 14px;
+			font-weight: 400;
+			color:$cl-009;
+			margin-top: 8px !important;
+		}
+		.field{
+			input{
+				line-height: 20px;
+				padding: 9px 10px;
+				font-family: $font-secondary;
+				color:$cl-022;
+				border: 1px solid $cl-003;				
+			}
+			select{
+				padding: 9px 10px;
+				font-family: $font-secondary;
+				color:$cl-022;
+				border: 1px solid $cl-003;
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none; /* Firefox */
+			}
+		}
+		///arow select custom
+		.epl-search-row-select .field{
+			position: relative;
+			z-index: 9;
+			select{
+				position: relative;
+				z-index: 9;
+				background-color: inherit;
+			}
+			&:after{
+				content: "";
+				position: absolute;
+				border-left: 3px solid transparent;
+				border-right: 3px solid transparent;
+				border-top: 6px solid $color-primary;
+				right: 6px;
+				top: 18px;
+				z-index: 1;
+			}
+			&:before{
+				content:"";
+				position: absolute;
+				height: 38px;
+				width: 18px;
+				background-color: $cl-004;
+				right: 1px;
+				top: 1px;
+				z-index: 1;
+				border-left: 1px solid $cl-003;
+			}
+		}
+		//end arow select custom
+		.epl-search-row-checkbox{
+			margin-right: 5px;
+			input{
+				margin-right: 10px;
+			}
+			label{
+				font-family: $font-secondary;
+				font-size: 13px;
+				font-weight: 400;
+				color:$cl-006;
+				padding-top: 8px;
+			}
+		}
+		.epl-search-submit{
+			margin-top: 13px;
+		}
+		.epl-search-btn{
+			border: 0px;
+			font-size: 13px;
+			color:$cl-001;
+			text-transform: uppercase;
+			line-height: 44px;
+			background-color: $color-primary;
+			font-weight: 500;
+			border-radius: 2px;
+		}
+		.epl-search-other{
+			.epl-search-row-checkbox{
+				position: relative;
+			}
+			input[type^=checkbox]{
+				width: 5px;
+			    margin: 0;
+			    padding: 0;
+			    position: absolute;
+			    top: 5px;
+			    left: 5px;
+			    display: none;
+			}
+			label{
+				margin-left: 25px;
+			}
+			input[type=checkbox] + label > span{
+				display: inline-block;
+			    text-align: center;
+			    width: 15px;
+			    height: 15px;
+			    line-height: 13px;
+			    font-size: 12px;
+			    background: $cl-004;
+			    border: 1px solid $cl-003;
+			    position: absolute;
+			    top: 10px;
+			    left: 1px;
+			    &:before{
+			    	content: '\f00c';
+			    	@extend %fa;
+				    font-size: 10px;
+				    line-height: 11px;
+				    color: $color-hover;
+				    display: none;
+			    }
+			}
+			input[type=checkbox]:checked + label > span:before{
+				display: block;
+			}
+		}
+		
+	}
+}
+.widget_epl_property_search.real_style_04{
+	margin-top: 50px;
+	.epl-search-tabs{
+		border-bottom: 3px solid $color-primary;
+		@extend %clearfix;
+		.tab-link{
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+			color:$color-secondary;
+			padding: 15px 30px;
+			margin-right: 0px;
+			background-color: $cl-003;
+			float: left;
+			margin-right: 3px;
+		}
+		.tab-link.epl-sb-current{
+			background-color: $color-primary;
+			color:$cl-001;
+			border-bottom: 0px;
+		}
+	}
+	.epl-search-forms-wrapper{
+		width: 100%;
+		max-width: 100%;
+		padding: 50px 25px;
+		background-color: $cl-001;
+		
+		border-top: 0px;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		overflow: hidden;
+		form{
+			@extend %clearfix;
+		}
+		.real_elp_tab_title{
+			font-size: 18px;
+			line-height: 18px;
+			text-transform: uppercase;
+			font-weight: 600;
+			color:$color-secondary;
+			margin-bottom: 13px;
+		}
+		.epl-search-label{
+			font-family: $font-secondary;
+			font-size: 14px;
+			font-weight: 400;
+			color:$cl-009;
+			margin-top: 8px !important;
+		}
+		.field{
+			input{
+				line-height: 20px;
+				padding: 9px 10px;
+				font-family: $font-secondary;
+				color:$cl-022;
+				border: 1px solid $cl-003;				
+			}
+			select{
+				padding: 9px 10px;
+				font-family: $font-secondary;
+				color:$cl-022;
+				border: 1px solid $cl-003;
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none; /* Firefox */
+			}
+		}
+		///arow select custom
+		.epl-search-row-select .field{
+			position: relative;
+			z-index: 9;
+			select{
+				position: relative;
+				z-index: 9;
+				background-color: inherit;
+			}
+			&:after{
+				content: "";
+				position: absolute;
+				border-left: 3px solid transparent;
+				border-right: 3px solid transparent;
+				border-top: 6px solid $color-primary;
+				right: 6px;
+				top: 18px;
+				z-index: 1;
+			}
+			&:before{
+				content:"";
+				position: absolute;
+				height: 38px;
+				width: 18px;
+				background-color: $cl-004;
+				right: 1px;
+				top: 1px;
+				z-index: 1;
+				border-left: 1px solid $cl-003;
+			}
+		}
+		//end arow select custom
+		.epl-search-row-checkbox{
+			margin-right: 5px;
+			input{
+				margin-right: 10px;
+			}
+			label{
+				font-family: $font-secondary;
+				font-size: 13px;
+				font-weight: 400;
+				color:$cl-006;
+				padding-top: 8px;
+			}
+		}
+		.epl-search-submit{
+			margin-top: 13px;
+		}
+		.epl-search-btn{
+			border: 0px;
+			font-size: 13px;
+			color:$cl-001;
+			text-transform: uppercase;
+			line-height: 44px;
+			background-color: $color-primary;
+			font-weight: 500;
+			border-radius: 2px;
+		}
+		.epl-search-other{
+			.epl-search-row-checkbox{
+				position: relative;
+			}
+			input[type^=checkbox]{
+				width: 5px;
+			    margin: 0;
+			    padding: 0;
+			    position: absolute;
+			    top: 5px;
+			    left: 5px;
+			    display: none;
+			}
+			label{
+				margin-left: 25px;
+			}
+			input[type=checkbox] + label > span{
+				display: inline-block;
+			    text-align: center;
+			    width: 15px;
+			    height: 15px;
+			    line-height: 13px;
+			    font-size: 12px;
+			    background: $cl-004;
+			    border: 1px solid $cl-003;
+			    position: absolute;
+			    top: 10px;
+			    left: 1px;
+			    &:before{
+			    	content: '\f00c';
+			    	@extend %fa;
+				    font-size: 10px;
+				    line-height: 11px;
+				    color: $color-hover;
+				    display: none;
+			    }
+			}
+			input[type=checkbox]:checked + label > span:before{
+				display: block;
+			}
+		}
+		
+	}
+}
+.widget_epl_author{
+	margin-top: 50px;
+	.epl-widget{
+		margin-bottom: 0px;
+	}
+	div.epl-author-image{
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+		&:hover{
+			img{
+				left: 0px;
+			}
+		}
+	}
+	.epl-author-content.author-content{
+		font-size: 16px;
+		color: $cl-009;
+		line-height: 25px;
+	}
+}
+.widget_epl_recent_property{
+	margin-top:50px;
+	.epl-inspection-times{
+		@extend %list_reset;
+		a{
+			padding: 25px 30px 5px 30px;
+			font-weight: 300;
+			display: inline-block;
+			color:$color-hover;
+			text-transform: capitalize;
+		}
+	}
+	.epl-property-widget-image-wrapper {
+		margin-top: -5px;
+		.epl-listing-widget{
+			margin-top: 30px;
+			margin-bottom: 0px;
+			border: 1px solid $cl-003;
+			border-radius: 2px;
+			overflow: hidden;
+		}
+	}
+	.entry-content{
+		padding: 0px 30px;
+		padding-bottom: 32px;
+		font-size: 16px;
+		font-family: $font-secondary;
+		font-weight: 300;
+		color:$cl-009;
+		line-height: 24px;
+	}
+	.property-heading{
+		margin-bottom: 12px;
+		a{
+			font-size: 20px;
+			display: inline-block;
+		}
+	}
+	.property-address{
+		margin-top: 10px;
+	}
+	.property-meta{
+		border: 0px;
+	}
+	.page-price{
+		font-size: 18px;
+		font-weight: 500;
+		color: $color-hover;
+		font-family: $font-primary;
+		.page-price-prefix{
+			color:$color-hover;
+			font-family: $font-primary;
+			font-size: 13px;
+			font-weight: 400;
+			margin-right: 20px;
+			position: relative;
+			&:after{
+				position: absolute;
+				content: "";
+				height: 13px;
+				width: 1px;
+				background-color: $color-hover;
+				right: -14px;
+				top:2px;
+			}
+		}
+	}
+	.property-feature-icons{
+		margin-top: 5px;
+		margin-bottom: 20px;
+		.icon-value{
+			font-weight: 300;
+			color:$color-primary;
+			font-family: $font-secondary;
+		}
+	}
+	.property-meta.price{
+		border: 0px;
+	}
+	.epl-property-button{
+		input{
+			background-color: $color-hover;
+			color:$cl-001;
+			text-transform: uppercase;
+			border: 0px;
+			padding: 10px 30px;
+		}
+	}
+}
