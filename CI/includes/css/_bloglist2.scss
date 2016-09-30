@@ -1,0 +1,83 @@
+/*
+  * Copyright 2015 Kopasoft http://kopatheme.com/.
+  * MIT License.
+*/
+.real_widget_no_plug_has_element{
+	.widget-content{
+		margin-top: -30px;
+	}
+	.entry-item{
+		border: 1px solid $cl-003;
+		overflow: hidden;
+		border-radius: 2px;
+		background-color: $cl-001;
+		margin-top: 30px;
+	}
+	.entry-thumb{
+		img{
+			width: 100%;
+		}
+		&:hover{
+			img{
+				left: 0px;
+			}
+		}
+	}
+	.entry-thumb.real_style_01{
+		padding-top: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+		iframe{
+			border-radius: 2px;
+			overflow: hidden;
+		}
+	}
+	.real_blockquote{
+		margin-top: 30px;
+	}
+	.paginator{
+		margin-top: 50px;
+	}
+	.entry-content{
+		padding: 27px 30px 30px 30px;
+		.real_meta_data{
+			margin-bottom: 5px;
+		}
+		.entry-title{
+			line-height: 32px;
+			margin-bottom: 15px;
+			a{
+				display: inline-block;
+			}
+		}
+		.entry-detail{
+			font-size: 16px;
+			color:$cl-009;
+			line-height: 25px;
+			margin-bottom: 30px;
+		}
+	}
+	.entry-content.real_style_01{
+		padding-left: 0px;
+		padding-bottom: 20px;
+	}
+	.owl-controls{
+		position: absolute;
+		bottom: 25px;
+		width: 100%;
+	}
+	.owl-theme .owl-controls .owl-page span{
+		height: 8px ;
+		width: 8px;
+		background-color: $cl-001;
+		margin: 0px 3px;
+		border-radius: 0px;
+		opacity: 1;
+		&:hover{
+			background-color: $color-hover;
+		}
+	}
+	.owl-theme .owl-controls .owl-page.active span{
+		background-color: $color-hover;
+	}
+}
