@@ -74,12 +74,13 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	//'dsn'	=> 'pgsql:host=localhost;port=5432;dbname=postgres;user=postgres;password=ubuntu',
 	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
+	'username' => 'postgres',
+	'password' => 'ubuntu',
+	'database' => 'fbuilders',
+	'dbdriver' => 'postgre',
+	'port' 	   => '5432',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
