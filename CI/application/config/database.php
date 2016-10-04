@@ -80,7 +80,6 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'fbbuilders',
 	'dbdriver' => 'mysqli',
-	'port' 	   => '5432',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
 	'db_debug' => TRUE,

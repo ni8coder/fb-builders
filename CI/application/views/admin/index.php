@@ -1,541 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!--<link rel="shortcut icon" href="<?php echo base_url(); ?>includes/admin/images/favicon.png" type="image/png">-->
 
-  <title>Quirk Responsive Admin Templates</title>
-
-  <link rel="stylesheet" href="<?php echo base_url(); ?>includes/admin/lib/Hover/hover.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>includes/admin/lib/fontawesome/css/font-awesome.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>includes/admin/lib/weather-icons/css/weather-icons.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>includes/admin/lib/ionicons/css/ionicons.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>includes/admin/lib/jquery-toggles/toggles-full.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>includes/admin/lib/morrisjs/morris.css">
-
-  <link rel="stylesheet" href="<?php echo base_url(); ?>includes/admin/css/quirk.css">
-
-  <script src="<?php echo base_url(); ?>includes/admin/lib/modernizr/modernizr.js"></script>
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="<?php echo base_url(); ?>includes/admin/lib/html5shiv/html5shiv.js"></script>
-  <script src="<?php echo base_url(); ?>includes/admin/lib/respond/respond.src.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-
-<header>
-  <div class="headerpanel">
-
-    <div class="logopanel">
-      <h2><a href="index.html">Quirk</a></h2>
-    </div><!-- logopanel -->
-
-    <div class="headerbar">
-
-      <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-
-      <div class="searchpanel">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-          </span>
-        </div><!-- input-group -->
-      </div>
-
-      <div class="header-right">
-        <ul class="headermenu">
-          <li>
-            <div id="noticePanel" class="btn-group">
-              <button class="btn btn-notice alert-notice" data-toggle="dropdown">
-                <i class="fa fa-globe"></i>
-              </button>
-              <div id="noticeDropdown" class="dropdown-menu dm-notice pull-right">
-                <div role="tabpanel">
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li class="active"><a data-target="#notification" data-toggle="tab">Notifications (2)</a></li>
-                    <li><a data-target="#reminders" data-toggle="tab">Reminders (4)</a></li>
-                  </ul>
-
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="notification">
-                      <ul class="list-group notice-list">
-                        <li class="list-group-item unread">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">New message from Weno Carasbong</a></h5>
-                              <small>June 20, 2015</small>
-                              <span>Soluta nobis est eligendi optio cumque...</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item unread">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <i class="fa fa-user"></i>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">Renov Leonga is now following you!</a></h5>
-                              <small>June 18, 2015</small>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <i class="fa fa-user"></i>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">Zaham Sindil is now following you!</a></h5>
-                              <small>June 17, 2015</small>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <i class="fa fa-thumbs-up"></i>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">Rey Reslaba likes your post!</a></h5>
-                              <small>June 16, 2015</small>
-                              <span>HTML5 For Beginners Chapter 1</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <i class="fa fa-comment"></i>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">Socrates commented on your post!</a></h5>
-                              <small>June 16, 2015</small>
-                              <span>Temporibus autem et aut officiis debitis...</span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <a class="btn-more" href="">View More Notifications <i class="fa fa-long-arrow-right"></i></a>
-                    </div><!-- tab-pane -->
-
-                    <div role="tabpanel" class="tab-pane" id="reminders">
-                      <h1 id="todayDay" class="today-day">...</h1>
-                      <h3 id="todayDate" class="today-date">...</h3>
-
-                      <h5 class="today-weather"><i class="wi wi-hail"></i> Cloudy 77 Degree</h5>
-                      <p>Thunderstorm in the area this afternoon through this evening</p>
-
-                      <h4 class="panel-title">Upcoming Events</h4>
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <h4>20</h4>
-                              <p>Aug</p>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">HTML5/CSS3 Live! United States</a></h5>
-                              <small>San Francisco, CA</small>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <h4>05</h4>
-                              <p>Sep</p>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">Web Technology Summit</a></h5>
-                              <small>Sydney, Australia</small>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <h4>25</h4>
-                              <p>Sep</p>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">HTML5 Developer Conference 2015</a></h5>
-                              <small>Los Angeles CA United States</small>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <h4>10</h4>
-                              <p>Oct</p>
-                            </div>
-                            <div class="col-xs-10">
-                              <h5><a href="">AngularJS Conference 2015</a></h5>
-                              <small>Silicon Valley CA, United States</small>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <a class="btn-more" href="">View More Events <i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="btn-group">
-              <button type="button" class="btn btn-logged" data-toggle="dropdown">
-                <img src="images/photos/loggeduser.png" alt="" />
-                Elen Adarna
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="profile.html"><i class="glyphicon glyphicon-user"></i> My Profile</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> Help</a></li>
-                <li><a href="../logout/logout_user"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <button id="chatview" class="btn btn-chat alert-notice">
-              <span class="badge-alert"></span>
-              <i class="fa fa-comments-o"></i>
-            </button>
-          </li>
-        </ul>
-      </div><!-- header-right -->
-    </div><!-- headerbar -->
-  </div><!-- header-->
-</header>
-
-<section>
-
-  <div class="leftpanel">
-    <div class="leftpanelinner">
-
-      <!-- ################## LEFT PANEL PROFILE ################## -->
-
-      <div class="media leftpanel-profile">
-        <div class="media-left">
-          <a href="#">
-            <img src="<?php echo base_url(); ?>includes/admin/images/photos/loggeduser.png" alt="" class="media-object img-circle">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">Elen Adarna <a data-toggle="collapse" data-target="#loguserinfo" class="pull-right"><i class="fa fa-angle-down"></i></a></h4>
-          <span>Software Engineer</span>
-        </div>
-      </div><!-- leftpanel-profile -->
-
-      <div class="leftpanel-userinfo collapse" id="loguserinfo">
-        <h5 class="sidebar-title">Address</h5>
-        <address>
-          4975 Cambridge Road
-          Miami Gardens, FL 33056
-        </address>
-        <h5 class="sidebar-title">Contact</h5>
-        <ul class="list-group">
-          <li class="list-group-item">
-            <label class="pull-left">Email</label>
-            <span class="pull-right">me@themepixels.com</span>
-          </li>
-          <li class="list-group-item">
-            <label class="pull-left">Home</label>
-            <span class="pull-right">(032) 1234 567</span>
-          </li>
-          <li class="list-group-item">
-            <label class="pull-left">Mobile</label>
-            <span class="pull-right">+63012 3456 789</span>
-          </li>
-          <li class="list-group-item">
-            <label class="pull-left">Social</label>
-            <div class="social-icons pull-right">
-              <a href="#"><i class="fa fa-facebook-official"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-pinterest"></i></a>
-            </div>
-          </li>
-        </ul>
-      </div><!-- leftpanel-userinfo -->
-
-      <ul class="nav nav-tabs nav-justified nav-sidebar">
-        <li class="tooltips active" data-toggle="tooltip" title="Main Menu"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
-        <li class="tooltips unread" data-toggle="tooltip" title="Check Mail"><a data-toggle="tab" data-target="#emailmenu"><i class="tooltips fa fa-envelope"></i></a></li>
-        <li class="tooltips" data-toggle="tooltip" title="Contacts"><a data-toggle="tab" data-target="#contactmenu"><i class="fa fa-user"></i></a></li>
-        <li class="tooltips" data-toggle="tooltip" title="Settings"><a data-toggle="tab" data-target="#settings"><i class="fa fa-cog"></i></a></li>
-        <li class="tooltips" data-toggle="tooltip" title="Log Out"><a href="signin.html"><i class="fa fa-sign-out"></i></a></li>
-      </ul>
-
-      <div class="tab-content">
-
-        <!-- ################# MAIN MENU ################### -->
-
-        <div class="tab-pane active" id="mainmenu">
-          <h5 class="sidebar-title">Favorites</h5>
-          <ul class="nav nav-pills nav-stacked nav-quirk">
-            <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-            <li><a href="widgets.html"><span class="badge pull-right">10+</span><i class="fa fa-cube"></i> <span>Widgets</span></a></li>
-            <li><a href="maps.html"><i class="fa fa-map-marker"></i> <span>Maps</span></a></li>
-          </ul>
-
-          <h5 class="sidebar-title">Main Menu</h5>
-          <ul class="nav nav-pills nav-stacked nav-quirk">
-            <li class="nav-parent">
-              <a href=""><i class="fa fa-check-square"></i> <span>Forms</span></a>
-              <ul class="children">
-                <li><a href="general-forms.html">Form Elements</a></li>
-                <li><a href="form-validation.html">Form Validation</a></li>
-                <li><a href="form-wizards.html">Form Wizards</a></li>
-                <li><a href="wysiwyg.html">Text Editor</a></li>
-              </ul>
-            </li>
-            <li class="nav-parent"><a href=""><i class="fa fa-suitcase"></i> <span>UI Elements</span></a>
-              <ul class="children">
-                <li><a href="buttons.html">Buttons</a></li>
-                <li><a href="icons.html">Icons</a></li>
-                <li><a href="typography.html">Typography</a></li>
-                <li><a href="alerts.html">Alerts &amp; Notifications</a></li>
-                <li><a href="tabs-accordions.html">Tabs &amp; Accordions</a></li>
-                <li><a href="sliders.html">Sliders</a></li>
-                <li><a href="graphs.html">Graphs &amp; Charts</a></li>
-                <li><a href="panels.html">Panels</a></li>
-                <li><a href="extras.html">Extras</a></li>
-              </ul>
-            </li>
-            <li class="nav-parent"><a href=""><i class="fa fa-th-list"></i> <span>Tables</span></a>
-              <ul class="children">
-                <li><a href="basic-tables.html">Basic Tables</a></li>
-                <li><a href="data-tables.html">Data Tables</a></li>
-              </ul>
-            </li>
-            <li class="nav-parent"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
-              <ul class="children">
-                <li><a href="asset-manager.html">Asset Manager</a></li>
-                <li><a href="people-directory.html">People Directory</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="blank.html">Blank Page</a></li>
-                <li><a href="notfound.html">404 Page</a></li>
-                <li><a href="signin.html">Sign In</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- tab-pane -->
-
-        <!-- ######################## EMAIL MENU ##################### -->
-
-        <div class="tab-pane" id="emailmenu">
-          <div class="sidebar-btn-wrapper">
-            <a href="compose.html" class="btn btn-danger btn-block">Compose</a>
-          </div>
-
-          <h5 class="sidebar-title">Mailboxes</h5>
-          <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
-            <li><a href="email.html"><i class="fa fa-inbox"></i> <span>Inbox (3)</span></a></li>
-            <li><a href="email.html"><i class="fa fa-pencil"></i> <span>Draft (2)</span></a></li>
-            <li><a href="email.html"><i class="fa fa-paper-plane"></i> <span>Sent</span></a></li>
-          </ul>
-
-          <h5 class="sidebar-title">Tags</h5>
-          <ul class="nav nav-pills nav-stacked nav-quirk nav-label">
-            <li><a href="#"><i class="fa fa-tags primary"></i> <span>Communication</span></a></li>
-            <li><a href="#"><i class="fa fa-tags success"></i> <span>Updates</span></a></li>
-            <li><a href="#"><i class="fa fa-tags warning"></i> <span>Promotions</span></a></li>
-            <li><a href="#"><i class="fa fa-tags danger"></i> <span>Social</span></a></li>
-          </ul>
-        </div><!-- tab-pane -->
-
-        <!-- ################### CONTACT LIST ################### -->
-
-        <div class="tab-pane" id="contactmenu">
-          <div class="input-group input-search-contact">
-            <input type="text" class="form-control" placeholder="Search contact">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-            </span>
-          </div>
-          <h5 class="sidebar-title">My Contacts</h5>
-          <ul class="media-list media-list-contacts">
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                    <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user1.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Christina R. Hill</h4>
-                  <span><i class="fa fa-phone"></i> 386-752-1860</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user2.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Floyd M. Romero</h4>
-                  <span><i class="fa fa-mobile"></i> +1614-650-8281</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user3.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Jennie S. Gray</h4>
-                  <span><i class="fa fa-phone"></i> 310-757-8444</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user4.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Alia J. Locher</h4>
-                  <span><i class="fa fa-mobile"></i> +1517-386-0059</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user5.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Nicholas T. Hinkle</h4>
-                  <span><i class="fa fa-skype"></i> nicholas.hinkle</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user6.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Jamie W. Bradford</h4>
-                  <span><i class="fa fa-phone"></i> 225-270-2425</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user7.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Pamela J. Stump</h4>
-                  <span><i class="fa fa-mobile"></i> +1773-879-2491</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user8.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Refugio C. Burgess</h4>
-                  <span><i class="fa fa-mobile"></i> +1660-627-7184</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user9.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Ashley T. Brewington</h4>
-                  <span><i class="fa fa-skype"></i> ashley.brewington</span>
-                </div>
-              </a>
-            </li>
-            <li class="media">
-              <a href="#">
-                <div class="media-left">
-                  <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user10.png" alt="">
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Roberta F. Horn</h4>
-                  <span><i class="fa fa-phone"></i> 716-630-0132</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div><!-- tab-pane -->
-
-        <!-- #################### SETTINGS ################### -->
-
-        <div class="tab-pane" id="settings">
-          <h5 class="sidebar-title">General Settings</h5>
-          <ul class="list-group list-group-settings">
-            <li class="list-group-item">
-              <h5>Daily Newsletter</h5>
-              <small>Get notified when someone else is trying to access your account.</small>
-              <div class="toggle-wrapper">
-                <div class="leftpanel-toggle toggle-light success"></div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <h5>Call Phones</h5>
-              <small>Make calls to friends and family right from your account.</small>
-              <div class="toggle-wrapper">
-                <div class="leftpanel-toggle-off toggle-light success"></div>
-              </div>
-            </li>
-          </ul>
-          <h5 class="sidebar-title">Security Settings</h5>
-          <ul class="list-group list-group-settings">
-            <li class="list-group-item">
-              <h5>Login Notifications</h5>
-              <small>Get notified when someone else is trying to access your account.</small>
-              <div class="toggle-wrapper">
-                <div class="leftpanel-toggle toggle-light success"></div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <h5>Phone Approvals</h5>
-              <small>Use your phone when login as an extra layer of security.</small>
-              <div class="toggle-wrapper">
-                <div class="leftpanel-toggle toggle-light success"></div>
-              </div>
-            </li>
-          </ul>
-        </div><!-- tab-pane -->
-
-
-      </div><!-- tab-content -->
-
-    </div><!-- leftpanelinner -->
-  </div><!-- leftpanel -->
-
-  <div class="mainpanel">
-
-    <!--<div class="pageheader">
-      <h2><i class="fa fa-home"></i> Dashboard</h2>
-    </div>-->
-
-    <div class="contentpanel">
 
       <div class="row">
         <div class="col-md-9 col-lg-8 dash-left">
@@ -548,8 +11,7 @@
               <h4 class="panel-title">Latest Announcement</h4>
             </div>
             <div class="panel-body">
-              <h2><br>
-			  A new admin template has been released by <span class="text-primary">ThemePixels</span> with a name <span class="text-success">Quirk</span> is now live and available for purchase!</h2>
+              <h2>A new admin template has been released by <span class="text-primary">ThemePixels</span> with a name <span class="text-success">Quirk</span> is now live and available for purchase!</h2>
               <h4>Explore this new template and see the beauty of Quirk! <a href="">Take a Tour!</a></h4>
             </div>
           </div><!-- panel -->
@@ -594,7 +56,7 @@
 
               <div class="mb20"></div>
 
-              <div id="basicflot" style="height: 263px"></div>
+              <div id="basicflot" style="height: 263px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 772px; height: 263px;" width="772" height="263"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 16px; text-align: center;">0.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 77px; text-align: center;">0.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 139px; text-align: center;">1.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 201px; text-align: center;">1.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 263px; text-align: center;">2.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 324px; text-align: center;">2.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 386px; text-align: center;">3.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 448px; text-align: center;">3.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 510px; text-align: center;">4.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 571px; text-align: center;">4.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 633px; text-align: center;">5.0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 695px; text-align: center;">5.5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 59px; top: 249px; left: 757px; text-align: center;">6.0</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 237px; left: 12px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 190px; left: 6px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 143px; left: 6px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 95px; left: 6px; text-align: right;">60</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 48px; left: 6px; text-align: right;">80</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 0px; text-align: right;">100</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 772px; height: 263px;" width="772" height="263"></canvas></div>
 
             </div><!-- panel-body -->
 
@@ -661,7 +123,7 @@
                       <p>Added products for this month: 75</p>
                     </div>
                     <div class="col-xs-5 col-lg-4 text-right">
-                      <input type="text" value="75" class="dial-success">
+                      <div style="display: inline; height: 98.7px; width: 98.7px;"><canvas width="98" height="98.7"></canvas><input type="text" value="75" class="dial-success" readonly="readonly" style="width: 53px; height: 32px; position: absolute; vertical-align: middle; margin-top: 32px; margin-left: -76px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 19px; line-height: normal; font-family: Arial; text-align: center; color: rgb(38, 43, 54); padding: 0px; -webkit-appearance: none;"></div>
                     </div>
                   </div>
                 </div>
@@ -683,7 +145,7 @@
                       <p>Rejected products for this month: 45</p>
                     </div>
                     <div class="col-xs-5 col-lg-4 text-right">
-                      <input type="text" value="45" class="dial-warning">
+                      <div style="display: inline; height: 98.7px; width: 98.7px;"><canvas width="98" height="98.7"></canvas><input type="text" value="45" class="dial-warning" readonly="readonly" style="width: 53px; height: 32px; position: absolute; vertical-align: middle; margin-top: 32px; margin-left: -76px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 19px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;"></div>
                     </div>
                   </div>
                 </div>
@@ -705,7 +167,7 @@
                       <p>Sold products for this month: 1,203</p>
                     </div>
                     <div class="col-xs-5 col-lg-4 text-right">
-                      <input type="text" value="55" class="dial-info">
+                      <div style="display: inline; height: 98.7px; width: 98.7px;"><canvas width="98" height="98.7"></canvas><input type="text" value="55" class="dial-info" readonly="readonly" style="width: 53px; height: 32px; position: absolute; vertical-align: middle; margin-top: 32px; margin-left: -76px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 19px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;"></div>
                     </div>
                   </div>
                 </div>
@@ -727,7 +189,7 @@
                       <p>Returned products this month: 22</p>
                     </div>
                     <div class="col-xs-5 col-lg-4 text-right">
-                      <input type="text" value="22" class="dial-danger">
+                      <div style="display: inline; height: 98.7px; width: 98.7px;"><canvas width="98" height="98.7"></canvas><input type="text" value="22" class="dial-danger" readonly="readonly" style="width: 53px; height: 32px; position: absolute; vertical-align: middle; margin-top: 32px; margin-left: -76px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 19px; line-height: normal; font-family: Arial; text-align: center; color: rgb(38, 43, 54); padding: 0px; -webkit-appearance: none;"></div>
                     </div>
                   </div>
                 </div>
@@ -764,7 +226,13 @@
                   <h4 class="panel-title">Earnings Graph Overview</h4>
                 </div>
                 <div class="panel-body">
-                  <div id="line-chart" class="body-chart"></div>
+                  <div id="line-chart" class="body-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="210" version="1.1" width="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="33.5" y="171" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">0</tspan></text><text x="33.5" y="134.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">25</tspan></text><text x="33.5" y="98" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">50</tspan></text><text x="33.5" y="61.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">75</tspan></text><text x="33.5" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">100</tspan></text><text x="474.99999999999994" y="183.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2015</tspan></text><text x="403.5326335006846" y="183.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2014</tspan></text><text x="332.0652670013692" y="183.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2013</tspan></text><text x="260.4020994979461" y="183.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2012</tspan></text><text x="188.93473299863075" y="183.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2011</tspan></text><text x="117.46736649931537" y="183.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2010</tspan></text><text x="46" y="183.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2009</tspan></text><path fill="none" stroke="#5bc0de" d="M46,141.8C63.866841624828844,125.37500000000001,99.60052487448652,79.75000000000001,117.46736649931537,76.10000000000001C135.33420812414423,72.45,171.0678913738019,112.6,188.93473299863075,112.6C206.8015746234596,112.6,242.53525787311725,76.10000000000001,260.4020994979461,76.10000000000001C278.3178913738019,76.10000000000001,314.1494751255134,112.6,332.0652670013692,112.6C349.93210862619804,112.6,385.66579187585575,85.22500000000001,403.5326335006846,76.10000000000001C421.39947512551345,66.97500000000001,457.1331583751711,48.724999999999994,474.99999999999994,39.599999999999994" stroke-width="3px" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#d9534f" d="M46,127.2C63.866841624828844,110.775,99.60052487448652,65.15,117.46736649931537,61.5C135.33420812414423,57.85,171.0678913738019,98,188.93473299863075,98C206.8015746234596,98,242.53525787311725,61.5,260.4020994979461,61.5C278.3178913738019,61.5,314.1494751255134,98,332.0652670013692,98C349.93210862619804,98,385.66579187585575,70.625,403.5326335006846,61.5C421.39947512551345,52.37500000000001,457.1331583751711,34.125,474.99999999999994,25" stroke-width="3px" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="46" cy="141.8" r="4" fill="#5bc0de" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="117.46736649931537" cy="76.10000000000001" r="4" fill="#5bc0de" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="188.93473299863075" cy="112.6" r="4" fill="#5bc0de" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="260.4020994979461" cy="76.10000000000001" r="4" fill="#5bc0de" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="332.0652670013692" cy="112.6" r="4" fill="#5bc0de" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="403.5326335006846" cy="76.10000000000001" r="4" fill="#5bc0de" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="474.99999999999994" cy="39.599999999999994" r="4" fill="#5bc0de" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="46" cy="127.2" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="117.46736649931537" cy="61.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="188.93473299863075" cy="98" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="260.4020994979461" cy="61.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="332.0652670013692" cy="98" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="403.5326335006846" cy="61.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="474.99999999999994" cy="25" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 366.033px; top: 71px; display: none;"><div class="morris-hover-row-label">2014</div><div class="morris-hover-point" style="color: #D9534F">
+  Weekly:
+  75
+</div><div class="morris-hover-point" style="color: #5BC0DE">
+  Monthly:
+  65
+</div></div></div>
                 </div>
               </div>
             </div>
@@ -932,7 +400,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user2.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user2.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -944,7 +412,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user10.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user10.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -956,7 +424,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user3.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user3.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -968,7 +436,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user5.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user5.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -980,7 +448,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user2.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user2.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -1004,7 +472,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user9.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user9.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -1015,7 +483,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user10.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user10.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -1026,7 +494,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user3.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user3.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -1037,7 +505,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user4.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user4.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -1048,7 +516,7 @@
                     <li class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img class="media-object img-circle" src="<?php echo base_url(); ?>includes/admin/images/photos/user6.png" alt="">
+                          <img class="media-object img-circle" src="images/photos/user6.png" alt="">
                         </a>
                       </div>
                       <div class="media-body">
@@ -1065,28 +533,4 @@
         </div><!-- col-md-3 -->
       </div><!-- row -->
 
-    </div><!-- contentpanel -->
-
-  </div><!-- mainpanel -->
-
-</section>
-
-<script src="<?php echo base_url(); ?>includes/admin/lib/jquery/jquery.js"></script>
-<script src="<?php echo base_url(); ?>includes/admin/lib/jquery-ui/jquery-ui.js"></script>
-<script src="<?php echo base_url(); ?>includes/admin/lib/bootstrap/js/bootstrap.js"></script>
-<script src="<?php echo base_url(); ?>includes/admin/lib/jquery-toggles/toggles.js"></script>
-
-<script src="<?php echo base_url(); ?>includes/admin/lib/morrisjs/morris.js"></script>
-<script src="<?php echo base_url(); ?>includes/admin/lib/raphael/raphael.js"></script>
-
-<script src="<?php echo base_url(); ?>includes/admin/lib/flot/jquery.flot.js"></script>
-<script src="<?php echo base_url(); ?>includes/admin/lib/flot/jquery.flot.resize.js"></script>
-<script src="<?php echo base_url(); ?>includes/admin/lib/flot-spline/jquery.flot.spline.js"></script>
-
-<script src="<?php echo base_url(); ?>includes/admin/lib/jquery-knob/jquery.knob.js"></script>
-
-<script src="<?php echo base_url(); ?>includes/admin/js/quirk.js"></script>
-<script src="<?php echo base_url(); ?>includes/admin/js/dashboard.js"></script>
-
-</body>
-</html>
+  
