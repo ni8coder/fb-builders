@@ -33,6 +33,8 @@
             </li>
             <li><a href="../admin/customer"><i class="fa fa-user"></i> <span>Customers</span></a>
             </li>
+            <li><a href="../userManagement/agent/loadView"><i class="fa fa-user"></i> <span>Agents</span></a></li>
+            <li><a href="../admin/customer"><i class="fa fa-user"></i> <span>Investors</span></a></li>
             <li><a href="income.php"><i class="fa fa-user"></i> <span>Income</span></a>
             </li>
             <li><a href="expense.php"><i class="fa fa-user"></i> <span>Expense</span></a>
