@@ -37,7 +37,7 @@ class Admin extends CI_Controller
 
 	function customer()
 	{
-		$data['fileToLoad'] = 'admin/people-directory';
+		$data['fileToLoad'] = 'admin/customer-directory';
 		$this->load->view('template/template',$data);
 	}
 }
