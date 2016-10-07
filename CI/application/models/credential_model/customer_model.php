@@ -18,9 +18,9 @@ class Customer_model extends CI_Model
 			return $insert;
 	}
 
-	function get_customer()
+	function get_customer($per_page, $uri_segment)
 	{
-		$query = $this->db->get('fb_customer');
+		$query = $this->db->get('fb_customer', $per_page, $uri_segment);
 		if($query->num_rows() > 0)
 		{
 			foreach ($query->result() as $row) {
