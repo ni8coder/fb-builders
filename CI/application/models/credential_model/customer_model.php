@@ -29,5 +29,12 @@ class Customer_model extends CI_Model
 			return $data;
 		}
 	}
+	function edit_customer($id)
+	{
+		$query=$this->db->query("SELECT *
+								 FROM fb_customer  
+								 WHERE id = $id");
+		return $query->result_array();
+	}
 }
 ?>

@@ -35,8 +35,8 @@
                   </div>
                 </div><!-- media -->
                 <ul class="panel-options">
-                  <li><a class="tooltips" href="<?php echo base_url(); ?>/user_management/customer/edit_customer" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Edit</button></a></li>
-                  <li><a class="tooltips" href="<?php echo base_url(); ?>/user_management/customer/delete_customer" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Delete</button></a></li>
+                  <li><a class="tooltips" href="<?php echo base_url(); ?>/user_management/customer/edit_customer/<?php echo $data['id']; ?>" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Edit</button></a></li>
+                  <li><a class="tooltips" href="<?php echo base_url(); ?>/user_management/customer/delete_customer/<?php echo $data['id']; ?>" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Delete</button></a></li>
                 </ul>
               </div><!-- panel-heading -->
 
