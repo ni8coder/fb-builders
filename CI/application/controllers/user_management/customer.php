@@ -83,14 +83,14 @@ class Customer extends CI_Controller
 								    $this->db->where('id', $id);
 								    $this->db->update('fb_customer', $data);
     //$this->session->set_flashdata('message', 'Your data updated Successfully..');
-   	 redirect('customer-directory/index');
+   	 redirect('customer-directory');
     }
 	 public function delete_customer(){  
 			$id=$this->uri->segment(3);
 		    $this->db->where('id', $id);
 		    $this->db->delete('fb_customer');
     // $this->session->set_flashdata('message', 'Your data deleted Successfully..');
-    redirect('customer-directory/index');
+    redirect('customer-directory');
     }
 }
 
