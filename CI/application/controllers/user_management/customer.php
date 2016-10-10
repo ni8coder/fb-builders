@@ -57,8 +57,8 @@ class Customer extends CI_Controller
 		$data["links"] = $this->pagination->create_links();
 		/*print_r($data);
 		exit();*/
-		$data['fileToLoad'] = 'admin/customer-directory';
-		$this->load->view('template/template', $data);
+		/*$data['fileToLoad'] = 'admin/customer-directory';
+		$this->load->view('template/template', $data);*/
 	}
 	function edit_customer()
 	{
