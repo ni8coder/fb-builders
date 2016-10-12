@@ -16,7 +16,7 @@ class Admin extends CI_Controller
 
 	function validate_credentials()
 	{
-		$username = $this->input->post('username');
+		/* $username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$this->load->model('admin_cred_model'); 
 		$query = $this->admin_cred_model->validate($username, $password);
@@ -32,7 +32,9 @@ class Admin extends CI_Controller
 		else
 		{
 			$this->index();
-		}
+		} */
+		$data['fileToLoad'] = 'admin/customer-directory';
+		$this->load->view('template/template',$data);
 	}
 
 	function customer()
