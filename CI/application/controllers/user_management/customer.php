@@ -72,7 +72,8 @@ class Customer extends CI_Controller
 		
 	}
 	public function update_data($id)
-	{		   
+	{
+		$this->load->model('credential_model/customer_model');		   
 	    $id=$this->uri->segment(4);
 	    $this->customer_model->update_customer($id);
 	    redirect('user_management/customer/showCustomer');
