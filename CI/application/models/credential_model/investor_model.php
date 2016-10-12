@@ -1,9 +1,9 @@
 <?php 
-class Agent_model extends CI_Model
+class Investor_model extends CI_Model
 {
-	function add_agent()
+	function add_investor()
 	{
-		$new_agent_data = array(
+		$new_investor_data = array(
 			'name' => $this->input->post('name'),
 			'email' => $this->input->post('email'),
 			'username' => $this->input->post('username'),
@@ -13,13 +13,13 @@ class Agent_model extends CI_Model
 			'cnic' => $this->input->post('cnic'),
 			'dob' => $this->input->post('dob'),
 			);
-		$insert = $this->db->insert('fb_agent', $new_agent_data);
+		$insert = $this->db->insert('fb_investor', $new_investor_data);
 			return $insert;
 	}
 
-	function get_agent($per_page, $uri_segment)
+	function get_investor($per_page, $uri_segment)
 	{
-		$query = $this->db->get('fb_agent', $per_page, $uri_segment);
+		$query = $this->db->get('fb_investor', $per_page, $uri_segment);
 		if($query->num_rows() > 0)
 		{
 			foreach ($query->result() as $row) {
@@ -28,9 +28,9 @@ class Agent_model extends CI_Model
 			return $data;
 		}
 	}
-	function update_agent($id)
+	function update_investor($id)
 	{
-		$edited_agent_data = array(
+		$edited_investor_data = array(
 			'name' => $this->input->post('name'),
 			'email' => $this->input->post('email'),
 			'username' => $this->input->post('username'),
@@ -41,7 +41,7 @@ class Agent_model extends CI_Model
 			'dob' => $this->input->post('dob'),
 			);
 		$this->db->where('id', $id);
-	    $this->db->update('fb_agent', $edited_agent_data);
+	    $this->db->update('fb_investor', $edited_investor_data);
 	}
 }
 ?>
