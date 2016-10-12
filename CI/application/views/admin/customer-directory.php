@@ -8,11 +8,11 @@
           <div class="col-sm-12 col-md-12 col-lg-12 people-list">
             <div class="people-options clearfix">
               <div class="btn-toolbar pull-left">
-                <a href="<?php echo base_url(); ?>/user_management/customer/index"><button type="button" class="btn btn-success btn-quirk">Add New Customer</button></a>
+                <a href="<?php echo base_url(); ?>user_management/customer/index"><button type="button" class="btn btn-success btn-quirk">Add New Customer</button></a>
               </div>
 
               <div class="btn-group pull-right people-pager">
-              <?php //echo $links;?>
+              <?php echo $links;?>
                 <!-- <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
                 <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button> -->
               </div>
@@ -33,8 +33,9 @@
                   </div>
                 </div><!-- media -->
                 <ul class="panel-options">
-                  <li><a class="tooltips" href="<?php echo base_url(); ?>/user_management/customer/edit_customer/<?php echo $customer->id; ?>" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Edit</button></a></li>
-                  <li><a class="tooltips" href="<?php echo base_url(); ?>/user_management/customer/delete_record/<?php echo $customer->id; ?>" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Delete</button></a></li>
+
+                  <li><a class="tooltips" href="<?php echo base_url(); ?>user_management/customer/edit_customer/<?php echo $customer->id; ?>" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Edit</button></a></li>
+                  <li><a class="tooltips" href="<?php echo base_url(); ?>user_management/customer/delete_customer/<?php echo $customer->id; ?>" data-toggle="tooltip" title="View Options"><button type="button" class="btn btn-default">Delete</button></a></li>
                 </ul>
               </div><!-- panel-heading -->
 
@@ -86,6 +87,7 @@
                   </div>
                 </div><!-- row -->
               </div>
+
             </div><!-- panel -->
           <?php } ?>
 
