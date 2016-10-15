@@ -50,12 +50,24 @@
         <li><a href="index.html"><i class="fa fa-home mr5"></i> Home</a></li>
         <li><a href="basic-tables.html">Projects</a></li>
       </ol>
+      <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 people-list">
+            <div class="people-options clearfix">
+              <div class="btn-toolbar pull-left">
+                <a href="<?php echo base_url(); ?>project_management/project/index"><button type="button" class="btn btn-success btn-quirk">Add New Project</button></a>
+              </div>
+
+              <div class="btn-group pull-right people-pager">
+              <?php echo $links;?>
+                <!-- <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button> -->
+              </div>
+              <span class="people-count pull-right">Showing <strong>1-10</strong> of <strong>34,404</strong> users</span>
+            </div><!-- people-options -->
+          </div>
+        </div>
 
       <div class="panel">
-        <div class="panel-heading">
-          <h4 class="panel-title">Fbuilders Projects</h4>
-          <div align="right"><button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Project</button></div>
-        </div>
         <div class="panel-body">
           <div class="table-responsive">
             <table id="dataTable1" class="table table-bordered table-striped-col">
@@ -63,51 +75,39 @@
                 <tr>
                   <th>Name</th>
                   <th>Location</th>
+                  <th>Type</th>
+                  <th>Category</th>
+                  <th>Parent Project</th>
                   <th>Action</th>
                 </tr>
               </thead>
-
-              <tfoot>
-                <tr>
-                  <th>Name</th>
-                  <th>Location</th>
-                  <th>Action</th>
-                </tr>
-              </tfoot>
-
-
+              <?php foreach ($data as $project) {?>
               <tbody>
                 <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
+                  <td><?php echo $project->name ?></td>
+                  <td><?php echo $project->location ?></td>
+                  <td><?php echo $project->type ?></td>
+                  <td><?php echo $project->category ?></td>
+                  <td><?php echo $project->parent_project ?></td>
                   <td>
                     <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Action <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="project_profile.php" id="" >Details</a></li>
-                    <li><a class="editMe" href="#"  data-toggle="modal" data-target="#editModal" id=""  >Edit</a></li>
-                    <li><a href="#" id="" >Delete</a></li>
-                  </ul>
-                </div><!-- btn-group -->
-              </td>
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Action <span class="caret"></span></button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?php echo base_url(); ?>project_management/project/showDetail" id="" >Details</a></li>
+                        <li><a class="editMe" href="#"  data-toggle="modal" data-target="#editModal" id=""  >Edit</a></li>
+                        <li><a href="#" id="" >Delete</a></li>
+                      </ul>
+                  </div><!-- btn-group -->
+                  </td>
                 </tr>
-                
               </tbody>
+              <?php } ?>
             </table>
           </div>
         </div>
       </div><!-- panel -->
 
 
-<script src="lib/jquery/jquery.js"></script>
-<script src="lib/jquery-ui/jquery-ui.js"></script>
-<script src="lib/bootstrap/js/bootstrap.js"></script>
-<script src="lib/jquery-toggles/toggles.js"></script>
-<script src="lib/datatables/jquery.dataTables.js"></script>
-<script src="lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
-<script src="lib/select2/select2.js"></script>
 
 <script src="js/quirk.js"></script>
 <script>

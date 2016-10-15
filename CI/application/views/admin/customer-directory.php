@@ -12,13 +12,17 @@
               </div>
 
               <div class="btn-group pull-right people-pager">
-              <?php echo $links;?>
+              <?php if(isset($links)){echo $links;}?>
                 <!-- <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
                 <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button> -->
               </div>
               <span class="people-count pull-right">Showing <strong>1-10</strong> of <strong>34,404</strong> users</span>
             </div><!-- people-options -->
-          <?php foreach ($data as $customer) {?>
+          </div>
+        </div>
+          <?php 
+            if(isset($data)){
+              foreach ($data as $customer) {?>
             <div class="panel panel-profile list-view">
               <div class="panel-heading">
                 <div class="media">
