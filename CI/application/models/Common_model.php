@@ -443,6 +443,7 @@ class Common_model extends CI_Model {
 			}
 		}
 		$query = $this->db->get($tablename)->row();
+		//print_r($query);exit;
 		return $query;
 	}
 

@@ -35,9 +35,9 @@
             </li>
             <li><a href="<?php echo base_url(); ?>user_management/agent/showAgent"><i class="fa fa-user"></i> <span>Agents</span></a></li>
             <li><a href="<?php echo base_url(); ?>user_management/investor/showInvestor"><i class="fa fa-user"></i> <span>Investors</span></a></li>
-            <li><a href="income.php"><i class="fa fa-user"></i> <span>Income</span></a>
+            <li><a href="<?php echo base_url(); ?>income/showIncome"><i class="fa fa-user"></i> <span>Income</span></a>
             </li>
-            <li><a href="expense.php"><i class="fa fa-user"></i> <span>Expense</span></a>
+            <li><a href="<?php echo base_url(); ?>expense/showExpense"><i class="fa fa-user"></i> <span>Expense</span></a>
             </li>
             <li class="nav-parent"><a href=""><i class="fa fa-file-text"></i> <span>Reports</span></a>
               <ul class="children" style="display: none;">
