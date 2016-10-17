@@ -134,5 +134,17 @@ class Project_model extends CI_Model
 			return $data;
 		}
 	}
+	function update_project($id)
+	{
+		
+		$edited_customer_data = array(
+			'name' => $this->input->post('name'),
+			'location' => $this->input->post('location'),
+			'type' => $this->input->post('type'),
+			'category' => $this->input->post('category'),
+			);
+		$this->db->where('id', $id);
+	    $this->db->update('project', $edited_customer_data);
+	}
 }
 ?>

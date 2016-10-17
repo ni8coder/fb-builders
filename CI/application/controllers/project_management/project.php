@@ -63,5 +63,35 @@ class Project extends CI_Controller
 		$data['fileToLoad'] = 'admin/projects-detail';
 		$this->load->view('template/template', $data);
 	}
+	function edit_project()
+	{
+		$id=$this->uri->segment(4);
+		//echo $id;exit;
+		$this->load->model('Common_model');
+		$data['edit_data']= $this->Common_model->get_info('project',$id);
+		$data['fileToLoad'] = 'admin/edit-project';
+		$this->load->view('template/template', $data);
+		
+	}
+	public function update_data($id)
+	{
+		$this->load->model('project_model/project_model');		   
+	    $id=$this->uri->segment(4);
+	    $this->project_model->update_project($id);
+	    redirect('project_management/project/showProject');
+		//$this->showCustomer();
+		/*$data['fileToLoad'] = 'admin/customer-directory';
+		$this->load->view('template/template', $data);*/
+    //$this->session->set_flashdata('message', 'Your data updated Successfully..');
+   	 //redirect('customer-directory');
+    }
+	public function delete_project(){
+		$id=$this->uri->segment(4);
+		$this->load->model('Common_model');
+		$this->Common_model->delete_record('project',$id);
+		redirect('project_management/project/showProject');
+		//$this->showCustomer();
+		
+	}
 }
 ?>

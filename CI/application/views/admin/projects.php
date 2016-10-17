@@ -94,8 +94,8 @@
                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Action <span class="caret"></span></button>
                       <ul class="dropdown-menu" role="menu">
                         <li><a href="<?php echo base_url(); ?>project_management/project/showDetail/<?php echo $project->id ?>" id="" >Details</a></li>
-                        <li><a class="editMe" href="#"  data-toggle="modal" data-target="#editModal" id=""  >Edit</a></li>
-                        <li><a href="#" id="" >Delete</a></li>
+                        <li><a class="editMe" href="<?php echo base_url(); ?>project_management/project/edit_project/<?php echo $project->id; ?>"  >Edit</a></li>
+                        <li><a href="<?php echo base_url(); ?>project_management/project/delete_project/<?php echo $project->id; ?>" >Delete</a></li>
                       </ul>
                   </div><!-- btn-group -->
                   </td>
