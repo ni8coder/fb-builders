@@ -41,7 +41,7 @@ class Project extends CI_Controller
 		$config['cur_tag_close'] = '</a>';
 		$this->pagination->initialize($config);
 		$this->load->model('project_model/project_model');
-		$data['data'] = $this->project_model->get_project($config['per_page'], $this->uri->segment(4));
+		$data['data'] = $this->project_model->get_project($config['per_page'], $this->uri->segment(4),NULL);
 		$data["links"] = $this->pagination->create_links();
 
 		$data['fileToLoad'] = 'admin/projects';
@@ -49,6 +49,17 @@ class Project extends CI_Controller
 	}
 	function showDetail()
 	{
+		if($this->uri->segment(4))
+		{
+			$id = $this->uri->segment(4);
+		}
+		$this->load->model('project_model/project_model');
+		$data['customer'] = $this->project_model->get_project_customer($id);
+		$data['agent'] = $this->project_model->get_project_agent($id);
+		$data['investor'] = $this->project_model->get_project_investor($id);
+		$data['income'] = $this->project_model->get_project_income($id);
+		$data['expense'] = $this->project_model->get_project_expense($id);
+		$data['data'] = $this->project_model->get_project(NULL,NULL,$id);
 		$data['fileToLoad'] = 'admin/projects-detail';
 		$this->load->view('template/template', $data);
 	}
