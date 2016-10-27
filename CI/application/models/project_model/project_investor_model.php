@@ -27,8 +27,23 @@ class Project_investor_model extends CI_Model
 		$insert = $this->db->insert('project_investment', $project_investment_data);
 		return $insert;
 	}
-	function get_investor()
+	function get_investor($project_id)
 	{
+		$this->db->select('investor_id');
+		$this->db->where('project_id',$project_id);
+		$query = $this->db->get('project_investment');
+		$d = [];
+		if($query->num_rows() > 0)
+		{
+			foreach ($query->result() as $row) {
+				$data_id[] = $row;
+			}
+			$d = $data_id;
+		}
+		for($i=0; $i<count($d); $i++)
+		{
+			$this->db->where('id !=', $d[$i]->investor_id);
+		}
 		$query = $this->db->get('fb_investor');
 		if($query->num_rows() > 0)
 		{

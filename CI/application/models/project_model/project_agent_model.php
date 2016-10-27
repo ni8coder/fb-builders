@@ -25,8 +25,23 @@ class Project_agent_model extends CI_Model
 		$insert = $this->db->insert('project_agent', $project_agent_data);
 		return $insert;
 	}
-	function get_agent()
+	function get_agent($project_id)
 	{
+		$this->db->select('agent_id');
+		$this->db->where('project_id',$project_id);
+		$query = $this->db->get('project_agent');
+		$d = [];
+		if($query->num_rows() > 0)
+		{
+			foreach ($query->result() as $row) {
+				$data_id[] = $row;
+			}
+			$d = $data_id;
+		}
+		for($i=0; $i<count($d); $i++)
+		{
+			$this->db->where('id !=', $d[$i]->agent_id);
+		}
 		$query = $this->db->get('fb_agent');
 		if($query->num_rows() > 0)
 		{

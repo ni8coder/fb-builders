@@ -20,6 +20,10 @@ class Project_model extends CI_Model
 			$this->db->where('id', $id);
 			$query = $this->db->get('project');
 		}
+		if(!$id)
+		{
+			$query = $this->db->get('project');
+		}
 		if($per_page)
 		{
 			$query = $this->db->get('project', $per_page, $uri_segment);

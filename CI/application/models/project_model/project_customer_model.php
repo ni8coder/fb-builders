@@ -26,8 +26,23 @@ class Project_customer_model extends CI_Model
 		$insert = $this->db->insert('project_customer', $project_customer_data);
 		return $insert;
 	}
-	function get_customer()
+	function get_customer($project_id)
 	{
+		$this->db->select('customer_id');
+		$this->db->where('project_id',$project_id);
+		$query = $this->db->get('project_customer');
+		$d = "";
+		if($query->num_rows() > 0)
+		{
+			foreach ($query->result() as $row) {
+				$data_id[] = $row;
+			}
+			$d = $data_id;
+		}
+		for($i=0; $i<count($d); $i++)
+		{
+			$this->db->where('id !=', $d[$i]->customer_id);
+		}
 		$query = $this->db->get('fb_customer');
 		if($query->num_rows() > 0)
 		{
@@ -39,8 +54,8 @@ class Project_customer_model extends CI_Model
 	}
 	function link_customer($project_id, $customer_id)
 	{
-		$this->db->where('customer_id', $customer_id);
 		$this->db->where('project_id', $project_id);
+		$this->db->where('customer_id', $customer_id);
 		$query = $this->db->get('project_customer');
 		if($query->num_rows() > 0)
 		{
