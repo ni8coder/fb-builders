@@ -48,6 +48,7 @@ class Project_investor extends CI_Controller
 	}
 	function investor_list()
 	{
+		$project_id = $this->uri->segment(4);
 		/*$config['base_url'] = base_url().'project_management/project_investor/investor_list';
 		$config['total_rows'] = $this->db->get('fb_investor')->num_rows();
 		$config['per_page'] = 4;
@@ -57,7 +58,7 @@ class Project_investor extends CI_Controller
 		$config['cur_tag_close'] = '</a>';
 		$this->pagination->initialize($config);*/
 		$this->load->model('project_model/project_investor_model');
-		$data['data'] = $this->project_investor_model->get_investor(/*$config['per_page'], $this->uri->segment(5)*/);
+		$data['data'] = $this->project_investor_model->get_investor($project_id);
 		//$data["links"] = $this->pagination->create_links();
 
 		$data['fileToLoad'] = 'admin/project-investor-list';

@@ -48,6 +48,7 @@ class Project_customer extends CI_Controller
 	}
 	function customer_list()
 	{
+		$project_id = $this->uri->segment(4);
 		/*$config['base_url'] = base_url().'project_management/project_customer/customer_list';
 		$config['total_rows'] = $this->db->get('fb_customer')->num_rows();
 		$config['per_page'] = 4;
@@ -57,7 +58,7 @@ class Project_customer extends CI_Controller
 		$config['cur_tag_close'] = '</a>';
 		$this->pagination->initialize($config);*/
 		$this->load->model('project_model/project_customer_model');
-		$data['data'] = $this->project_customer_model->get_customer(/*$config['per_page'], $this->uri->segment(5)*/);
+		$data['data'] = $this->project_customer_model->get_customer($project_id);
 		//$data["links"] = $this->pagination->create_links();
 
 		$data['fileToLoad'] = 'admin/project-customer-list';
