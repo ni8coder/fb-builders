@@ -29,7 +29,7 @@
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li><a href="<?php echo base_url(); ?>project_management/project/showProject"><i class="fa fa-check-square"></i> <span>Projects</span></a>
             </li>
-            <li><a href="properties.php"><i class="fa fa-suitcase"></i> <span>Properties</span></a>
+            <li><a href="<?php echo base_url(); ?>product_management/product/showProduct"><i class="fa fa-suitcase"></i> <span>Products</span></a>
             </li>
             <li><a href="<?php echo base_url(); ?>user_management/customer/showCustomer"><i class="fa fa-user"></i> <span>Customers</span></a>
             </li>
